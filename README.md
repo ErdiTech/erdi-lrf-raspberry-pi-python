@@ -7,8 +7,8 @@ Supported: **LRF22VB, LRF50VB, LRF50H, LRF100H, LRF200H, LRF300H, LRF600H, LRF15
 ## Install
 
 ```bash
-pip install "git+https://github.com/Tommyapi/erdi-lrf-raspberry-pi-python"      # reader + logger
-pip install "erdi-lrf-pi[mqtt,mavlink] @ git+https://github.com/Tommyapi/erdi-lrf-raspberry-pi-python"
+pip install "git+https://github.com/ErdiTech/erdi-lrf-raspberry-pi-python"      # reader + logger
+pip install "erdi-lrf-pi[mqtt,mavlink] @ git+https://github.com/ErdiTech/erdi-lrf-raspberry-pi-python"
 ```
 
 UART wiring and Raspberry Pi serial setup: [docs/raspberry-pi-uart.md](docs/raspberry-pi-uart.md).
@@ -31,7 +31,7 @@ Units are per model (H series centimetres, VB series millimetres, family A metre
 
 ## Pixhawk / ArduPilot companion computer
 
-`erdi-lrf-mavlink` sends `DISTANCE_SENSOR` (centimetres, laser type, downward orientation by default) with the model's published minimum and maximum range. On ArduPilot set `RNGFND1_TYPE=10` (MAVLink), `RNGFND1_ORIENT=25` (downward), and `RNGFND1_MIN` / `RNGFND1_MAX` (metres in current ArduPilot; `RNGFND1_MIN_CM` / `RNGFND1_MAX_CM` in firmware before the rename) to match; see [erdi-lrf-pixhawk-ardupilot](https://github.com/Tommyapi/erdi-lrf-pixhawk-ardupilot) for the direct-to-flight-controller Lua option. Bench-test before flight.
+`erdi-lrf-mavlink` sends `DISTANCE_SENSOR` (centimetres, laser type, downward orientation by default) with the model's published minimum and maximum range. On ArduPilot set `RNGFND1_TYPE=10` (MAVLink), `RNGFND1_ORIENT=25` (downward), and `RNGFND1_MIN` / `RNGFND1_MAX` (metres in current ArduPilot; `RNGFND1_MIN_CM` / `RNGFND1_MAX_CM` in firmware before the rename) to match; see [erdi-lrf-pixhawk-ardupilot](https://github.com/ErdiTech/erdi-lrf-pixhawk-ardupilot) for the direct-to-flight-controller Lua option. Bench-test before flight.
 
 ## Tests
 
@@ -44,8 +44,8 @@ The tests run over a pyserial `loop://` virtual port using golden frames from th
 ## Related projects
 
 - [ErdiTech/erdi-lrf-drivers](https://github.com/ErdiTech/erdi-lrf-drivers): the protocol library and ROS 2 node
-- [erdi-lrf-ros2-examples](https://github.com/Tommyapi/erdi-lrf-ros2-examples): ROS 2 launch files and RViz
-- [laser-rangefinder-module-database](https://github.com/Tommyapi/laser-rangefinder-module-database): dataset of laser rangefinder specifications
+- [erdi-lrf-ros2-examples](https://github.com/ErdiTech/erdi-lrf-ros2-examples): ROS 2 launch files and RViz
+- [laser-rangefinder-module-database](https://github.com/ErdiTech/laser-rangefinder-module-database): dataset of laser rangefinder specifications
 
 ## Support / 打赏
 
