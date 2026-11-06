@@ -46,6 +46,7 @@ The tests run over a pyserial `loop://` virtual port using golden frames from th
 - [ErdiTech/erdi-lrf-drivers](https://github.com/ErdiTech/erdi-lrf-drivers): the protocol library and ROS 2 node
 - [erdi-lrf-ros2-examples](https://github.com/ErdiTech/erdi-lrf-ros2-examples): ROS 2 launch files and RViz
 - [laser-rangefinder-module-database](https://github.com/ErdiTech/laser-rangefinder-module-database): dataset of laser rangefinder specifications
+- [ERDI module datasheets, wiring diagrams and prices](https://erdilrf.com/models/) — the modules these tools target
 
 ## Support / 打赏
 
@@ -68,3 +69,4 @@ Built by tommyapi.com
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
