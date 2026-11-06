@@ -1,0 +1,12 @@
+[Unit]
+Description=ERDI laser rangefinder to MQTT
+After=network-online.target
+
+[Service]
+User=pi
+ExecStart=/usr/local/bin/erdi-lrf-mqtt --port /dev/serial0 --model LRF22VB --host 192.168.1.10 --topic erdi_lrf/distance
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

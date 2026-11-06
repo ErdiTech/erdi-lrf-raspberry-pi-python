@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "erdi-lrf-pi"
+version = "0.1.0"
+description = "Raspberry Pi tools for ERDI laser rangefinder modules: serial reader, CSV logger, MQTT publisher, MAVLink DISTANCE_SENSOR bridge"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "ERDI TECH LTD" }]
+keywords = ["raspberry-pi", "laser-rangefinder", "lidar", "uart", "mqtt", "mavlink", "erdi"]
+dependencies = ["pyserial>=3.4", "erdi-lrf>=0.1.1"]
+
+[project.optional-dependencies]
+mqtt = ["paho-mqtt>=1.6"]
+mavlink = ["pymavlink>=2.4"]
+test = ["pytest"]
+
+[project.scripts]
+erdi-lrf-log = "erdi_lrf_pi.logger:main"
+erdi-lrf-mqtt = "erdi_lrf_pi.mqtt_pub:main"
+erdi-lrf-mavlink = "erdi_lrf_pi.mavlink_bridge:main"
+
+[tool.setuptools]
+packages = ["erdi_lrf_pi"]
