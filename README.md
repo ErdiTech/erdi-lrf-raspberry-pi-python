@@ -1,5 +1,7 @@
 # ERDI laser rangefinder on Raspberry Pi (Python)
 
+Datasheets and public prices are on the [LRF50H page](https://erdilrf.com/models/lrf50h/?utm_source=github&utm_medium=readme&utm_campaign=erdi-lrf-raspberry-pi-python) and in the [full ERDI laser rangefinder model list](https://erdilrf.com/models/?utm_source=github&utm_medium=readme&utm_campaign=erdi-lrf-raspberry-pi-python).
+
 Python tools to use an **ERDI 905 nm laser rangefinder module with a Raspberry Pi**: a serial reader, a **CSV data logger**, an **MQTT publisher** and a **MAVLink `DISTANCE_SENSOR` bridge** that feeds the distance to a **Pixhawk / ArduPilot / PX4** flight controller from a companion computer. Works on any Linux board or PC with a UART or USB-TTL adapter (Raspberry Pi 3/4/5/Zero, Jetson, Orange Pi). Built on the protocol codecs of [`erdi-lrf`](https://pypi.org/project/erdi-lrf/) (`pip install erdi-lrf`), which cites every constant to the module manual.
 
 Supported: **LRF22VB, LRF50VB, LRF50H, LRF100H, LRF200H, LRF300H, LRF600H, LRF1500H** (460800 baud `5C` stream) and **LR1000E2 ... LR2000E4, LRF1200A1, LRF3000A1, SPD1200N0/N2/N4** (115200 baud `55 AA` polled).
